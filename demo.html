@@ -15,9 +15,17 @@ responder and does not necessarily represent best practices.
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<style>
 		body { font-family: sans-serif;  }
+		
+		body.mobile-portrait { color: #00c; }
+		body.mobile-landscape { color: #009; }
+		body.tablet-portrait { color: #006; }
+		body.tablet-landscape { color: #003; }
+		body.desktop { color: #000; } 
+		
 		header h1 { color: #fff; padding: 20px; font-weight: normal;}
 		p { padding: 0px 20px; }
 		h2 { padding: 0px 20px; }
+		
 		.desktop header { background: #000; }
 		.tablet-landscape header { background: #003; }
 		.tablet-portrait header { background: #006; }
@@ -72,10 +80,12 @@ responder and does not necessarily represent best practices.
   			});
   			
   			// Bind to all of the break points
-  			$('body').bind('breakpoint320 breakpoint480 breakpoint768 breakpoint1024 breakpoint1280', function(event, breakpoint)
-  			{
-  				displayBreakpoint(breakpoint);
-  			});
+  			$('body').bind(
+  				'breakpoint320 breakpoint480 breakpoint768 breakpoint1024 breakpoint1280', 
+				function(event, breakpoint)	{
+					displayBreakpoint(breakpoint);
+				}
+			);
   			
   			function displayBreakpoint(bp) {
   				$('h2').text('Current Break Point:');
