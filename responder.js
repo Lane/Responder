@@ -55,21 +55,21 @@ Description:    Adds a device specific class to elements based on
         
         base.init = function()
         {   
-                base.options = $.extend({}, $.responsive.respond.defaultOptions, options);
-                
-                $(window).resize(function()
-                {
-                    currentBreakpoint = base.getCurrentBreakpoint();
-                    if (oldBreakpoint != currentBreakpoint) 
-                    {
-                        if(oldBreakpoint !== undefined)
-                            base.$el.removeClass(oldBreakpoint.className);
-                        base.$el.addClass(currentBreakpoint.className);
-                        currentBreakpoint.callback();
-                        base.$el.trigger("breakpoint"+currentBreakpoint.width);
-                        oldBreakpoint = currentBreakpoint;
-                    }
-                }).resize();
+			base.options = $.extend({}, $.responsive.respond.defaultOptions, options);
+			
+			$(window).resize(function()
+			{
+				currentBreakpoint = base.getCurrentBreakpoint();
+				if (oldBreakpoint != currentBreakpoint) 
+				{
+					if(oldBreakpoint !== undefined)
+						base.$el.removeClass(oldBreakpoint.className);
+					base.$el.addClass(currentBreakpoint.className);
+					currentBreakpoint.callback();
+					base.$el.trigger("breakpoint"+currentBreakpoint.width);
+					oldBreakpoint = currentBreakpoint;
+				}
+			}).resize();
         };
         
         base.getCurrentBreakpoint = function()
