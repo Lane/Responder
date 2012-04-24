@@ -66,7 +66,7 @@ Description:    Adds a device specific class to elements based on
 						base.$el.removeClass(oldBreakpoint.className);
 					base.$el.addClass(currentBreakpoint.className);
 					currentBreakpoint.callback();
-					base.$el.trigger("breakpoint"+currentBreakpoint.width);
+					base.$el.trigger("breakpoint"+currentBreakpoint.width, currentBreakpoint);
 					oldBreakpoint = currentBreakpoint;
 				}
 			}).resize();
