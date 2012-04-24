@@ -1,0 +1,62 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Demo</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<style>
+		body { font-family: sans-serif;  }
+		header h1 { color: #fff; padding: 20px; font-weight: normal;}
+		p { padding: 0px 20px; }
+		.desktop header { background: #000; }
+		.tablet-landscape header { background: #003; }
+		.tablet-portrait header { background: #006; }
+		.mobile-landscape header { background: #009; }
+		.mobile-portrait header { background: #00c; }
+	</style>
+</head>
+<body>
+  	<!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+	<header>
+		<h1>Responder Demo</h1>
+	</header>
+	
+	<p>Resize the browser window to trigger different break points.</p>
+	
+  	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  	<script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
+  	<script src="responder.js"></script>
+  	<script type="text/javascript">
+  		$(document).ready(function()
+  		{
+  			$('body').responder();
+  			
+  			$('body').bind('breakpoint320', function() {
+  				$('header h1').text("Mobile Portrait");
+  			});
+  			
+  			$('body').bind('breakpoint480', function() {
+  				$('header h1').text("Mobile Landscape");
+  			});
+  			
+  			$('body').bind('breakpoint768', function() {
+  				$('header h1').text("Tablet Portrait");
+  			});
+  			
+  			$('body').bind('breakpoint1024', function() {
+  				$('header h1').text("Tablet Landscape");
+  			});
+  			
+  			$('body').bind('breakpoint1280', function() {
+  				$('header h1').text("Desktop");
+  			});
+  			
+  		});
+  	</script>
+</body>
+</html>

@@ -14,10 +14,10 @@ Description:    Adds a device specific class to elements based on
 ---------------------------------------------------------------------
 **/
 
-;(function ( $ ) {
+;(function ($) {
 
     // initialize namespace if it doesn't exist
-    if (!$.responsive {
+    if (!$.responsive) {
             $.responsive = {};
     };
     
