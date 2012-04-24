@@ -34,24 +34,30 @@
   	<script type="text/javascript">
   		$(document).ready(function()
   		{
+  			// Apply the responder to the 'body' element with the default break points
   			$('body').responder();
   			
+  			// Bind to the mobile portrait break point
   			$('body').bind('breakpoint320', function() {
   				$('header h1').text("Mobile Portrait");
   			});
   			
+  			// Bind to the mobile landscape break point
   			$('body').bind('breakpoint480', function() {
   				$('header h1').text("Mobile Landscape");
   			});
   			
+  			// Bind to the tablet portrait break point
   			$('body').bind('breakpoint768', function() {
   				$('header h1').text("Tablet Portrait");
   			});
   			
+  			// Bind to the tablet landscape break point
   			$('body').bind('breakpoint1024', function() {
   				$('header h1').text("Tablet Landscape");
   			});
   			
+  			// Bind to the desktop break point
   			$('body').bind('breakpoint1280', function() {
   				$('header h1').text("Desktop");
   			});
