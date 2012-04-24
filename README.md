@@ -42,6 +42,11 @@ This will add the "mobile" class to the body element if the window width is betw
     
 It is also possible to specify a callback function when creating the breakpoint.  The callback function will execute when entering a new breakpoint.    
     
+    new $.responsive.Breakpoint(768, "tablet-portrait", function() {
+        // code executed when entering this break point
+        alert("The tablet-portrait break point has been triggered");
+    });
+    
 ### Options ###
 
 #### Default Options ####
