@@ -40,6 +40,12 @@ This will add the "mobile" class to the body element if the window width is betw
         // Do something when entering the "desktop" break point
     });
     
+You can also access the break point object from within the event binding:
+
+    $('body').bind("breakpoint0", function(event, breakpoint) {
+        alert("Current class: " + breakpoint.className);
+    });
+    
 It is also possible to specify a callback function when creating the breakpoint.  The callback function will execute when entering a new breakpoint.    
     
     new $.responsive.Breakpoint(768, "tablet-portrait", function() {
