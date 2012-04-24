@@ -70,12 +70,15 @@ Description:    Adds a device specific class to elements based on
         {
             var w = $(window).width();
             var bps = base.options.breakpoints;
-      for (var i = 0; i < bps.length; i++) {
-        if (w >= bps[i].width && ( bps.length == i+1 || w < bps[i+1].width )) {
-          return bps[i];
-        }
-      }
-      return 0;
+			for (var i = 0; i < bps.length; i++) 
+			{
+				if (w >= bps[i].width && 
+					(bps.length == i+1 || w < bps[i+1].width)) 
+				{
+			  		return bps[i];
+				}
+			}
+			return 0;
         };
         
         base.init();
