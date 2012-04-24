@@ -1,6 +1,6 @@
 # Responder #
 
-jQuery plugin to add classes and trigger events based on defined breakpoints.
+Responder is a jQuery plugin to add classes and trigger events based on defined break points (resolution sizes).  This allows you to style elements and execute javascript based on the browser window resolution or device width. 
 
 ## Usage ##
 
