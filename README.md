@@ -65,7 +65,7 @@ A break point can take three parameters:
 
 Create a break point using the constructor:
 
-    var breakpoint = new Breakpoint('320', 'mobile-portrait');
+    var breakpoint = new $.responsive.Breakpoint('320', 'mobile-portrait');
     
 ## Credit ##
 
