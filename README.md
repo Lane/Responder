@@ -63,4 +63,5 @@ Create a break point using the constructor:
 ## Credit ##
 
 **Breakpoints.js**
+Credited for the break point idea.  I worked off of this plugin initially but wanted a saw to apply the breakpoint to specific elements. 
 http://xoxco.com/projects/code/breakpoints/
