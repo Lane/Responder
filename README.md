@@ -2,6 +2,13 @@
 
 Responder is a jQuery plugin to add classes and trigger events based on defined break points (screen resolutions).  This allows you to style elements and execute javascript based on the browser window resolution or device width. 
 
+## Responder vs. Media Queries ##
+
+Why use this plugin when media queries already allow for styling based on different device widths?  There are a few reasons:
+
+1. When dealing with mobile and desktop interactive elements on a page there is sometimes a need to switch functionality between devices.  Triggering a code block to execute when entering a breakpoint allows for that functionality switch to occur.
+2. Older browsers do not support media queries, but do support javascript.  This plugin could be used to replicate the functionality of media queries.
+
 ## Usage ##
 
 Specify an element and any breakpoints you would like to associate it.  
