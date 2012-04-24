@@ -2,9 +2,9 @@
 UAlberta Respond
 ---------------------------------------------------------------------
 Author:         Lane Olson
-Sources:        breakpoint.js:
+Sources:        breakpoint.js - base idea
                     http://xoxco.com/projects/code/breakpoints/
-                jQuery Plugin Patterns:
+                jQuery Plugin Patterns - skeleton for plugin
                     http://coding.smashingmagazine.com/2011/10/11/essential-jquery-plugin-patterns/
 Version:        1.0a
 Date:           April 23, 2012
@@ -21,7 +21,13 @@ Description:    Adds a device specific class to elements based on
             $.responsive = {};
     };
     
-    // Breakpoint class
+    /** 
+     * 	Class: Breakpoint
+     *
+     *	@param	width		document width at which to trigger the break point
+     *	@param	className	the class to add to the specified element at the break point
+     *	@param	callback	a function to execute once the break point has been entered
+     */
     $.responsive.Breakpoint = function(width, className, callback)
     {
         var obj = this;
@@ -95,9 +101,9 @@ Description:    Adds a device specific class to elements based on
     };
     
     $.fn.responder = function( options ) {
-            return this.each(function () {
-                    (new $.responsive.respond(this, options));
-            });
+        return this.each(function () {
+            (new $.responsive.respond(this, options));
+        });
     };
     
 })( jQuery );
